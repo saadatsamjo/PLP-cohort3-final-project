@@ -1,0 +1,76 @@
+.brandi{
+    font-size: 1rem;
+    color: #212529;
+    text-align: center;
+    list-style: none;
+    background-color: #43be29e0;
+    background-clip: padding-box;
+    border: 1px solid #0b7a24;
+    border-radius: .25rem;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 18%);
+}
+
+/*The login page */
+
+.default-page {
+/*    background-color: #d7d7d7 !important;*/
+}
+
+.the-default-card {
+    color: white;
+    background-color: #00A0A4 !important;
+    border-radius: 5px;
+    box-shadow: 1px 1px 45px 1px rgba(0,0,0,0.35);
+}
+
+
+.email-icon, .password-icon, .calendar-icon{
+    color: white !important;
+}
+
+
+.input-group-field{
+    
+    border: solid white 2px;
+    border-radius: 6px;
+}
+
+.default-button {
+    color:white;
+    margin-right: 10px !important;
+    border:solid white 1px;
+    border-radius: 10px;
+    background-color: #00a0a4;
+}
+
+.default-form-links:hover{
+    font-size: 17px;
+
+}
+
+.default-button:hover{
+    font-size: 18px;
+    color:white;
+    background-color: #00a0a4;
+    border:solid white 1px;
+
+}
+
+.default-email-input {
+    border: solid white 2px !important;
+    border-radius: 8px;
+}
+
+.full-name-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.low {
+    font-size: 10px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stack Overflow Clone - Questions</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <style>
+    /* Additional CSS styles for layout and appearance */
+    .answer {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="question">
+      <h2>Question Title</h2>
+      <p>Question content goes here...</p>
+    </div>
+
+    <div class="answer">
+      <h3>Most Voted Answer</h3>
+      <p>Answer content goes here...</p>
+      <div class="d-flex align-items-center">
+        <span class="vote-count mr-2">10</span>
+        <button class="btn btn-sm btn-success vote-btn upvote">Upvote</button>
+        <button class="btn btn-sm btn-danger vote-btn downvote">Downvote</button>
+      </div>
+    </div>
+
+    <div class="answer">
+      <h3>Other Answers</h3>
+      <p>Answer content goes here...</p>
+      <div class="d-flex align-items-center">
+        <span class="vote-count mr-2">5</span>
+        <button class="btn btn-sm btn-success vote-btn upvote">Upvote</button>
+        <button class="btn btn-sm btn-danger vote-btn downvote">Downvote</button>
+      </div>
+    </div>
+
+    <div class="answer">
+      <h3>Another Answer</h3>
+      <p>Answer content goes here...</p>
+      <div class="d-flex align-items-center">
+        <span class="vote-count mr-2">2</span>
+        <button class="btn btn-sm btn-success vote-btn upvote">Upvote</button>
+        <button class="btn btn-sm btn-danger vote-btn downvote">Downvote</button>
+      </div>
+    </div>
+
+    <!-- Add more answers here -->
+
+  </div>
+
+  <!-- Add Bootstrap and jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+
+  <script>
+    // JavaScript code for upvote and downvote buttons using AJAX
+    $(document).ready(function () {
+      $('.vote-btn').on('click', function () {
+        const voteCountElement = $(this).parent().find('.vote-count');
+        const currentVotes = parseInt(voteCountElement.text());
+        const isUpvote = $(this).hasClass('upvote');
+        const voteDelta = isUpvote ? 1 : -1;
+
+        // Simulate the AJAX call by updating the vote count immediately
+        voteCountElement.text(currentVotes + voteDelta);
+
+        // Send an actual AJAX request to update the votes on the server
+        // Replace the 'your_api_endpoint' with the actual API endpoint
+        // You need to handle this request on your server-side to update the votes in the database.
+        // For simplicity, we're just updating the vote count on the front-end here.
+        // $.ajax({
+        //   type: 'POST',
+        //   url: 'your_api_endpoint',
+        //   data: {
+        //     voteDelta: voteDelta,
+        //     answerId: $(this).closest('.
+      });
+    });
+  </script>
+</body>
+</html>
